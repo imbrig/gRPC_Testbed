@@ -1,0 +1,14 @@
+# Conan >= 2.0.10 & Cmake >= 3.19 required
+
+[requires]
+    # Public
+    abseil/20230125.3
+    grpc/1.54.3
+    protobuf/3.21.12
+
+[generators]
+    CMakeDeps
+    CMakeToolchain
+
+[layout]
+    cmake_layout

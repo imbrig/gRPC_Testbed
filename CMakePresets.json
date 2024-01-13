@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "default",
+      "description": "Windows x64",
+      "generator": "Visual Studio 16 2019",
+      "architecture": {
+        "value": "x64"
+      },
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "toolchainFile": "${sourceDir}/build/generators/conan_toolchain.cmake",
+      "cacheVariables": {
+        "CMAKE_POLICY_DEFAULT_CMP0091": "NEW"
+      }
+    }
+  ]
+}

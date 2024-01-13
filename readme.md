@@ -10,3 +10,4 @@ pip install grpcio-tools
 pip install --pre "betterproto[compiler]"
 
 Run the `config_default_debug.bat` for debug or `config_default_release.bat` for release. All generated code from the proto files should be in the build folder under `proto_cpp` and `proto_py`, the cpp files will be added to the project by the cmake config script.
+After compiling, run the `Testbed.exe` for the server and the `run_test_client.bat` for the client to test communication between the two.

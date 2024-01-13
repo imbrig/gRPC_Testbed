@@ -2,14 +2,20 @@ syntax = "proto3";
 
 package testbed;
 
-service Greeter {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
-}
-
 message HelloRequest {
-  string name = 1;
+  string value = 1;
+  uint32 extra_times = 2;
 }
 
-message HelloReply {
-  repeated string message = 1;
+message HelloResponse {
+  repeated string values = 1;
+}
+
+message HelloStreamResponse  {
+  string value = 1;
+}
+
+service HelloService {
+  rpc Hello (HelloRequest) returns (HelloResponse) {}
+  rpc HelloStream(HelloRequest) returns (stream HelloStreamResponse);
 }
